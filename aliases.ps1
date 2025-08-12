@@ -166,7 +166,7 @@ function Show-MyAliases {
     $aliasList = @(
         [PSCustomObject]@{Alias='gpl'; OriginalCommand='git pull'; Description='Descarga los últimos cambios del repositorio remoto.'},
         [PSCustomObject]@{Alias='gpsh'; OriginalCommand='git push'; Description='Sube tus commits locales al repositorio remoto.'},
-        [PSCustomObject]@{Alias='gsts'; OriginalCommand='git status'; Description='Muestra el estado actual del repositorio.'},
+        [PSCustomObject]@{Alias='gst'; OriginalCommand='git status'; Description='Muestra el estado actual del repositorio.'},
         [PSCustomObject]@{Alias='gss'; OriginalCommand='git stash'; Description='Guarda temporalmente los cambios que no están listos para un commit.'},
         [PSCustomObject]@{Alias='gsp'; OriginalCommand='git stash pop'; Description='Aplica el último "stash" y lo elimina de la lista.'},
         [PSCustomObject]@{Alias='gch'; OriginalCommand='git checkout <rama>'; Description='Cambia a la rama especificada.'},
