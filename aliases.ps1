@@ -55,11 +55,13 @@ Set-Alias -Name gnb -Value Invoke-GitNewBranch -Option AllScope
 function Invoke-GitSyncWithDevelop {
     param([string]$currentBranch = (git rev-parse --abbrev-ref HEAD))
     Write-Host "🔄 Syncing with 'develop'..." -ForegroundColor Cyan
+    git stash
     git checkout develop
     git pull
     Write-Host "Merging 'develop' into '$currentBranch'..." -ForegroundColor Cyan
     git checkout $currentBranch
     git merge develop
+    git stash pop
 }
 Set-Alias -Name gsync -Value Invoke-GitSyncWithDevelop -Option AllScope
 
