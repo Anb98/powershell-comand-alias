@@ -96,15 +96,13 @@ Set-Alias -Name irun -Value Invoke-InfisicalRun -Option AllScope
 
 # Runs a command using the 'prod' environment in Infisical.
 function Invoke-InfisicalRunProd {
-    param($command)
-    infisical run --env=prod -- $command
+    infisical run --env=prod -- $args
 }
 Set-Alias -Name irunp -Value Invoke-InfisicalRunProd -Option AllScope
 
 # Runs a command using the 'staging' environment in Infisical.
 function Invoke-InfisicalRunStaging {
-    param($command)
-    infisical run --env=staging -- $command
+    infisical run --env=staging -- $args
 }
 Set-Alias -Name iruns -Value Invoke-InfisicalRunStaging -Option AllScope
 
